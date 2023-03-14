@@ -352,7 +352,7 @@ class lib:
 
     def add_data(self):
         print("sdfg")
-        conn=mysql.connector.connect(host='localhost',user='root',password='Leg12345',database='librarymanagement',auth_plugin='mysql_native_password')
+        conn=mysql.connector.connect(host='',user='',password='',database='',auth_plugin='mysql_native_password')
         my_cursor=conn.cursor()
         my_cursor.execute("insert into library values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",(self.member.get(),
                                                                                                    self.IDno.get(),
@@ -376,7 +376,7 @@ class lib:
 
 
     def update(self):
-        conn=mysql.connector.connect(host='localhost',user='root',password='Leg12345',database='librarymanagement',auth_plugin='mysql_native_password')
+        conn=mysql.connector.connect(host='',user='',password='',database='',auth_plugin='mysql_native_password')
         my_cursor=conn.cursor()
         my_cursor.execute("update library set Member=%s,First_Name=%s,Last_Name=%s,Address=%s,Phone_No=%s,Sem=%s,Book_ID=%s,Book_Title=%s,Author_Name=%s,Date_Borrowed=%s,Due_Date=%s,Fine=%s,Price=%s where ID_Number=%s",(
                                                                             self.member.get(),
@@ -402,7 +402,7 @@ class lib:
         messagebox.showinfo("Success!","Details Updated")
 
     def fetch_data(self):
-        conn=mysql.connector.connect(host='localhost',user='root',password='Leg12345',database='librarymanagement',auth_plugin='mysql_native_password')
+        conn=mysql.connector.connect(host='',user='',password='',database='',auth_plugin='mysql_native_password')
         my_cursor=conn.cursor()
         my_cursor.execute("select *from library")
         rows=my_cursor.fetchall()
@@ -479,7 +479,7 @@ class lib:
         if self.IDno.get()=="":
             messagebox.showerror("Error","Select a member")
         else:
-            conn=mysql.connector.connect(host='localhost',user='root',password='Leg12345',database='librarymanagement',auth_plugin='mysql_native_password')
+            conn=mysql.connector.connect(host='',user='',password='',database='',auth_plugin='mysql_native_password')
             my_cursor=conn.cursor()
             query="delete from library where ID_Number=%s"
             value=(self.IDno.get(),)
