@@ -33,7 +33,7 @@ class login_page:
             messagebox.showerror("Error!","All fields are required",parent=self.window)
         else:
             try:
-                conn=mysql.connector.connect(host='localhost', user='root', password='Leg12345', database='librarymanagement')
+                conn=mysql.connector.connect(host='', user='', password='', database='')
                 cur = conn.cursor()
                 cur.execute("select * from login where username=%s and password=%s",(self.email_entry.get(),self.password_entry.get()))
                 row=cur.fetchone()
