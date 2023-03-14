@@ -38,7 +38,7 @@ class SignUp:
             messagebox.showerror("Error!","Sorry!, All fields are required",parent=self.window)
 
         else:
-            conn=mysql.connector.connect(host='localhost', user='root', password='Leg12345', database='librarymanagement',auth_plugin='mysql_native_password')
+            conn=mysql.connector.connect(host='', user='', password='', database='',auth_plugin='mysql_native_password')
             cur = conn.cursor()
             cur.execute("select *from login where username=%s",([self.unamevar.get()]))
             row=cur.fetchone()
