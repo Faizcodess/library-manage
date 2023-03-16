@@ -39,7 +39,7 @@ class Count:
         # self.issuecount.bind("<ButtonRelease-1>",self.get_cursor)
 
     def fetch_data(self):
-        conn=mysql.connector.connect(host='localhost',user='root',password='Leg12345',database='librarymanagement',auth_plugin='mysql_native_password')
+        conn=mysql.connector.connect(host='',user='',password='',database='',auth_plugin='mysql_native_password')
         my_cursor=conn.cursor()
         my_cursor.execute("select Book_Title, count(*) from library group by Book_Title")
         rows=my_cursor.fetchall()
